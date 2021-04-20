@@ -162,7 +162,7 @@ function makeResponsive() {
             .append("text")
             .style("fill", "white")
             .attr("x", d => xLinearScale(d[chosenXAxis]))
-            .attr("y", d => yLinearScale(d[chosenYAxis]) - 1)
+            .attr("y", d => yLinearScale(d[chosenYAxis]) - 5)
             .attr("dy", "1em")
             .attr("text-anchor", "middle")
             .classed("stateText", true)
@@ -171,7 +171,7 @@ function makeResponsive() {
         // Call update tooltip function
         updateTooltip(chosenXAxis, chosenYAxis, circlesGroup, stateLabels);
 
-        // Step 8: Create event listener for axes change
+        // Step 7: Create event listener for axes change
         // ======================================
         xLabel.selectAll("text").on("click", function () {
             
@@ -289,8 +289,8 @@ function makeResponsive() {
 };
 
 
-// Function to find x and y scale for domain
-// ============================================
+// Step 8: Function to find x and y scale for domain
+// =================================================
 function domainX(dataset, factor) {
     var domain = d3.extent(dataset, data => data[factor]);
     return domain;
@@ -337,8 +337,8 @@ function updatePlot(circlesGroup, stateLabels, xLinearScale, yLinearScale, chose
         .attr("y", d => yLinearScale(d[chosenYAxis]) + 3.5)
 };
 
-// Function to update Tooltip
-// ===========================
+// Step 9: Function to update Tooltip
+// ==================================
 function updateTooltip(chosenXAxis, chosenYAxis, circlesGroup, stateLabels) {
     
     // Create variable for Tooltip
@@ -389,7 +389,7 @@ function updateTooltip(chosenXAxis, chosenYAxis, circlesGroup, stateLabels) {
             break;
     };
 
-    // Step 7: Initialize tooltip
+    // Step 10: Initialize tooltip
     // ====================================
     var toolTip = d3.tip()
         .attr("class", "d3-tip")
@@ -398,7 +398,7 @@ function updateTooltip(chosenXAxis, chosenYAxis, circlesGroup, stateLabels) {
         return(`<strong>${d.state}</strong><br>${toolTipX}: ${d[chosenXAxis]}${unitX}<br>${toolTipY}: ${d[chosenYAxis]}${unitY}`);  
         });
 
-    // Step 8: Create tooltip in the chart
+    // Step 11: Create tooltip in the chart
     // ====================================
     circlesGroup.call(toolTip);
     stateLabels.call(toolTip);

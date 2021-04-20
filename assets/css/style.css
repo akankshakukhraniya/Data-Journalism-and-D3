@@ -31,7 +31,7 @@ body {
 }
 
 #footer a {
-  color: red;
+  color: greenyellow;
 }
 
 .navbar-brand {
@@ -52,7 +52,7 @@ body {
 }
 
 .chartlabel-header {
-  background-color: aqua !important;
+  background-color: aquamarine !important;
 }
 
 .chartlabel-inactive {

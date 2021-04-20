@@ -33,7 +33,7 @@
 
 .stateCircle {
   fill: #89bdd3;
-  stroke: #e3e3e3;
+  stroke: blue;
 }
 
 /* .chart {
@@ -49,14 +49,14 @@
 .d3-tip {
   position: absolute;
   padding: 6px;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1;
   line-height: 1.5em;
-  color: #fff;
+  color: white;
   text-align: center;
   text-transform: capitalize;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 4px;
+  background:black;
+  border-radius: 5px;
 }
 
 /* Mobile Rules */
