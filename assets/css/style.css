@@ -1,0 +1,62 @@
+.iframeContainer {
+  padding: 20px;
+  border: 1px solid #e3e3e3;
+}
+
+/* Sticky Footer rules (https://getbootstrap.com/examples/sticky-footer/) */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Padding bottom by footer height */
+  padding-bottom: 80px;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%; /* Set the fixed height of the footer here */
+  height: 10px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+#footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+#footer a {
+  color: red;
+}
+
+.navbar-brand {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px !important;
+}
+
+#poverty-healthcare,
+#poverty-smokes,
+#poverty-obesity,
+#age-healthcare,
+#age-smokes,
+#age-obesity,
+#income-healthcare,
+#income-smokes,
+#income-obesity {
+    display: none;
+}
+
+.chartlabel-header {
+  background-color: aqua !important;
+}
+
+.chartlabel-inactive {
+  font-weight: lighter;
+  fill: aquamarine;
+  transition: fill 0.3s ease-out;
+}
